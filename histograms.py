@@ -20,7 +20,7 @@ if __name__ == "__main__":
         views = metas["Views"]
         subscribers = metas["Subscribers"]
         z_score = (views/subscribers - mean)/std_deviation
-        channel_dict[channel].append(z_score) if channel in channel_dict.keys() else channel_dict.update({channel: []})
+        channel_dict[channel].append(z_score) if channel in channel_dict.keys() else channel_dict.update({channel: [z_score]})
 
 
     # Make histograms
